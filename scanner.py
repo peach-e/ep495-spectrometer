@@ -157,7 +157,7 @@ def execute_scan(position_low,position_high,scan_filename):
     dwf.FDwfAnalogInFrequencySet       (hdwf, c_double(scan_frequency))     # Sets the acquisition Frequency to 100hz
     dwf.FDwfAnalogInBufferSizeSet      (hdwf, c_int(N_buffer))              # Sets the Acquisiton Buffer to 500 samples.
     dwf.FDwfAnalogInChannelEnableSet   (hdwf, c_int(0), c_bool(True))       # Enable the channel (0 ==> A1)
-    dwf.FDwfAnalogInChannelRangeSet    (hdwf, c_int(0), c_double(10))	  # Set channel 0 to have range of 10
+    dwf.FDwfAnalogInChannelRangeSet    (hdwf, c_int(0), c_double(10))	    # Set channel 0 to have range of 10
 
     time.sleep(2)                                                           # Wait at for the offset to stabilize (~2s)
 
